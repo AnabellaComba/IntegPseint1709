@@ -1,0 +1,24 @@
+Algoritmo convertirTextoAArray
+    Definir palabra Como Caracter
+    Definir array Como Caracter // Tamaño máximo del arreglo, ajustar según necesidad
+    Definir i Como Entero
+
+    // Pedir al usuario que ingrese la palabra
+    Escribir "Ingrese la palabra a convertir en arreglo:"
+    Leer palabra
+	Dimensionar array [100]
+    // Obtener la longitud de la palabra
+    Definir longitud Como Entero
+    longitud <- Longitud(palabra)
+
+    // Inicializar el arreglo
+    Para i <- 0 Hasta longitud - 1 Hacer
+        array[i] <- Subcadena(palabra, i + 1, 1) // Convertir la palabra en un arreglo de caracteres
+    FinPara
+
+    // Imprimir el arreglo para verificar
+    Escribir "El arreglo de caracteres es:"
+    Para i <- 0 Hasta longitud - 1 Hacer
+        Escribir array[i]
+    FinPara
+FinAlgoritmo
